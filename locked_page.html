@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<Title> LOCKED-PAGE </Title>
+<meta charset="UTF-8">
+
+    <style>
+
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #000000;
+        }
+
+	.crt::before {
+		content: " ";
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+		z-index: 2;
+		background-size: 100% 2px, 3px 100%;
+		pointer-events: none;
+			}
+
+	@keyframes flicker {
+		0% {opacity: 0.27861;}
+		5% {opacity: 0.34769;}
+		10% {opacity: 0.23604;}
+		15% {opacity: 0.10626;}
+		20% {opacity: 0.18128;}
+		25% {opacity: 0.10626;}
+		30% {opacity: 0.18128;}
+		35% {opacity: 0.23604;}
+			}
+
+	.crt::after {
+		content: " ";
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: rgba(18, 16, 16, 0.1);
+		opacity: 0;
+		z-index: 2;
+		pointer-events: none;
+		animation: flicker 0.15s infinite;
+			}
+
+
+        #loginForm {
+            background-color: #383838;
+            padding: 30px;
+            border-radius: 8px;
+            color: #00FF00;
+            text-align: center;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #44DB44;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6DE86D;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+	<div class="crt"> </div>
+
+    <div id="loginForm">
+        <h1>Protected Page Access</h1>
+        <p>Hint: What kind of spells do wizards use?</p>
+        <form id="passwordForm">
+            <input type="password" id="passwordInput" placeholder="Enter Password" required>
+            <br>
+            <button type="button" onclick="validatePassword()">Access Content</button>
+        </form>
+        <div id="errorMsg" class="error"></div>
+    </div>
+
+    <script>
+        const correctPassword = "Passward";
+
+        function validatePassword() {
+            const inputPassword = document.getElementById("passwordInput").value;
+            const errorMsg = document.getElementById("errorMsg");
+
+            if (inputPassword === correctPassword) {
+                errorMsg.textContent = "";
+                window.location.href = "https://www.bing.com/videos/riverview/relatedvideo?q=rick+roll&mid=4E7B1C0F8E67E9F7B1364E7B1C0F8E67E9F7B136&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUCuAXFkgsw1L7xaCfnd5JJOw&FORM=VIRE";}
+
+	else {
+                errorMsg.textContent = "Incorrect password! Please try again.";
+                document.getElementById("passwordInput").value = "";
+                document.getElementById("passwordInput").focus();
+            }
+        }
+
+        document.getElementById("passwordInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                validatePassword();}
+        });
+    </script>
+</body>
+</html>

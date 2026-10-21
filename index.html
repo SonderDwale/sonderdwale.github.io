@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+SonderDwale
+</title>
+<meta charset="UTF-8">
+<style>
+
+/*-CREDIT-boodlebox + edge ai help-*/
+	.fullscreen-gif {
+		position: fixed;
+		inset: 0;
+		width: 100vw;
+		height: 100vh;
+		background: black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow-x: hidden;
+		animation: fadeOut 3s ease-in-out forwards;
+		animation-delay: 4.3s; 
+		z-index: 9999;
+		pointer-events: none;}
+	.fullscreen-gif img {
+		width: 50%;
+		height: 50%;
+		object-fit: contain;}	
+	@keyframes fadeOut {
+		0% {opacity: 1;}
+		100% {opacity: 0;}
+			}
+/*-CREDIT-https://oudkee.neocities.org/tutorials/tutcrt-CREDIT-*/
+	.crt::before {
+		content: " ";
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+		z-index: 2;
+		background-size: 100% 2px, 3px 100%;
+		pointer-events: none;}
+	@keyframes flicker {
+		0% {opacity: 0.27861;}
+		5% {opacity: 0.34769;}
+		10% {opacity: 0.23604;}
+		15% {opacity: 0.10626;}
+		20% {opacity: 0.18128;}
+		25% {opacity: 0.10626;}
+		30% {opacity: 0.18128;}
+		35% {opacity: 0.23604;}}
+	.crt::after {
+		content: " ";
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: rgba(18, 16, 16, 0.1);
+		opacity: 0;
+		z-index: 2;
+		pointer-events: none;
+		animation: flicker 0.15s infinite;}
+
+
+    html{background-image: url("images/tree_spread.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;}
+    html{padding-top: 40px; 
+	margin: 0;}
+    h1{font-size: 82px;}
+	blockquote {font-size: 24px;}
+    h2{font-size: 48px;}
+
+
+        .my-box {position: relative;
+			top: 10%;
+			left: 10%;
+			width: 80%;
+			height: 10%;
+		background-color: #A7C7A7;
+		background-image: url("images/frog_flower.png");
+		background-size: 600px 400px;
+		background-position: top right;
+		background-repeat: no-repeat;
+		border-radius: 25px;
+		box-shadow: 0 4px 8px rgba(0,0,0,2);
+		padding: 5px;
+		text-align: left;}
+	h1 {margin-top: 7px;
+		margin-bottom: -10px;
+		margin-left: 25px;}
+	blockquote {font-size: 14px;
+		margin-top: 0;
+		margin-right: 50%;
+		margin-left: 19px;}
+
+	.secret-link {width: 10%;
+		padding: .5%;
+		margin: -10% 0% 0% 84%;
+		font-size: 34px;
+		text-align: center;
+		color: #ebdec3;
+		border-radius: 14px;
+		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+		background-color: #C75750;}
+	a:link {color: #ebdec3;
+		text-decoration: none;}
+	a:visited {color: maroon;
+		text-decoration: none;}
+
+       #content {position: relative;
+		width: 75%;
+		height: 950px;
+		margin: 1% 10% 6% 11%;  
+		padding: 2%; 
+		background-color: #cddbb2;
+		opacity: 95%;  
+		text-align: right;         
+		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+		border-radius: 10px;           
+		font-family: "Lucida Grande";}
+
+		.artist {position: absolute;
+			width: 25%;
+			height: 20%;
+			padding: 2px ;
+			margin: -2% 0% 1% 4%;
+			text-align: right;
+			background-image: url("images/DSC00180.jpg");
+			background-size: 300px 210px;
+			background-position: right;
+			background-repeat: no-repeat;  
+			border-radius: 14px;           
+			box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
+		h2 {text-align: left;
+			font-size: xx-large;}
+		ul {color: #ebdec3;
+			line-height: 2;        
+			text-align: right;  
+			font-family: "Lucida Grande";
+			font-size: 15px;
+			margin: 0% 4% 0% 0%;}
+		ul.no-bullets {
+			list-style-type: none;
+			margin-top: 20px;
+			padding: 4px;}
+	
+		.me {position: relative;
+			top: -9%;
+			left: 60%;
+			width: 35%;	
+			height: 30%;
+			padding: 1px;	
+			text-align: center;
+			border: 7px;
+			border-color: #cddbc2;
+			border-style: outset;
+  			border-radius: 14px;  
+			background-image: url("images/me.png");
+			background-size: 100% 110%;
+			background-position: right;
+			background-repeat: no-repeat;}
+
+		.link {position: absolute;
+			top: 10%;
+			left: 38%;
+			width: 15%;
+			padding: 1%;
+			font-size: 24px;
+			font-family: "Lucida Sans";
+			font-weight: bold;
+			text-align: center;
+			color: #ebdec3;
+			border-radius: 14px;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+			background-color: #ba5c78;}
+		a:link {color: #ebdec3;
+			text-decoration: none;}
+		a:visited {color: maroon;
+			text-decoration: none;}
+
+	.stories {position: absolute;
+			top: 20%;
+			left: 38%;
+			width: 15%;
+			padding: 1%;
+			font-size: 24px;
+			font-family: "Lucida Sans";
+			font-weight: bold;
+			text-align: center;
+			color: #ebdec3;
+			border-radius: 14px;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+			background-color: #ba5c78;}
+		a:stories {color: #ebdec3;
+			text-decoration: none;}
+		a:visited {color: maroon;
+			text-decoration: none;}
+
+
+		.stmt {position: absolute;
+			top: 31%;
+			left: 58.5%;
+			width: 37%;
+			padding: 1% 2% 1% 2%;
+			box-sizing: border-box;
+			font-size: 20px;
+			text-align: left;
+			background-color: #ebdec3;
+			opacity: 75%;
+			border-radius: 14px;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.2);}	
+
+	h3 {position: absolute;
+		top: 30%;
+		left: 10%;
+		font-size: 32px;
+		text-align: left;}
+
+		.audio {position: absolute;
+			top: 38%;
+			left: 6%;
+			width: 27.5%;
+			padding: 1% 2% 1% 1%;
+			font-size: 24px;
+			text-align: left;}
+
+</style>
+</head>
+
+<body>
+	<div class="fullscreen-gif">
+		<img src="images/Newlogo-ezgif.com-video-to-gif-converter.gif" alt="Intro GIF">
+	</div>
+
+	<div class="crt"> </div>
+   
+	<div class="my-box">
+		<h1>Bella Macaluso</h1>
+			<blockquote> "It is a frightening thought, that in one fraction of a moment you can fall in the kind of love that takes a lifetime to get over." - Beau Taplin </blockquote>
+    	</div>
+
+<div id="content">
+
+	<h2>Favorite Artists of the Month</h2>
+		<div class="artist">
+			<ul class="no-bullets">
+				<li><a href="https://www.youtube.com/@Neytirix">Neytirix</a></li>
+				<li><a href="https://youtube.com/@andylandchannel?si=Tay-z4tN2eMm0TgC">Andy Land</a></li>
+				<li><a href="https://www.youtube.com/@minbitt">Minbitt</a></li>
+				<li><a href="https://www.youtube.com/@kanepixels">Kane Pixels</a></li>
+				<li><a href="https://www.youtube.com/@MeatCanyon">MeatCanyon</a></li>
+			</ul>
+		</div>
+
+	<div class="me"></div>
+
+
+		<p class="stmt">
+			Kumasta! I am a college student here in the West! <br> I'm currently interested in traditional 2D digital art / animation, but dabble in everything. I'm working on my coding skills (as you can see) and for fun making watercolors out of fauna and rocks! Magpaalam!
+		</p>
+
+
+	
+		<div class="link">
+			<a href="https://sonderdwaleart.carrd.co">Commission Website</a>
+		</div>
+
+		<div class="stories">
+			<a href="Story1.html">The Girl and the Eggs</a>
+		</div>
+		
+		<h3>Best Study Song</h3>
+			<div class="audio">
+				<audio controls autoplay>
+  					<source src="images/Einaudi_Experience.ogg" type="audio/ogg">
+ 					<source src="images/Einaudi_Experience.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+				</audio>
+			</div>
+	
+</div>
+
+	<div class="secret-link">
+		<a href="locked_page.html">SECRET SHHHH</a>
+	</div>
+
+</body>
+</html>
